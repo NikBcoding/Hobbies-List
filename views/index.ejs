@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>My Hobbies</h1>
+    <p><%= title %></p>
+    <form action="/" method="POST">
+
+    <input type="text" name="name" placeholder="add a hobby">
+    <input type="text" name="detail" placeholder="add a detail">
+    
+    <button type='submit'>Add Hobby</button> 
+  </form>
+    <% hobbies.forEach(function(h, idx) { %>
+       
+
+        <a href="/show/<%=h._id%>"><%= h.name %></a>
+      
+  <form action="/<%= h._id %>?_method=DELETE" method='POST'>
+    <button type="submit">Delete</button>
+  </form>
+    <% }); %>
+
+  </body>
+</html>

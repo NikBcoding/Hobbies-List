@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <h1><%= hobby.name%></h1>
+   <h1><%= hobby.detail%></h1>
+
+
+   <form action="/<%= hobby._id%>?_method=PUT" method="POST">
+    <input type="text" name="name" value="<%= hobby.name%>">
+    <input type="text" name="detail" value="<%= hobby.detail%>">
+    <input type="submit">
+</form>
+</body>
+</html>
